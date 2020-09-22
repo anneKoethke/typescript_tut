@@ -1,0 +1,1 @@
+console.log('No messages from here, because I\'m outside of the src folder...')

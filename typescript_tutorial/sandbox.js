@@ -5,3 +5,7 @@
 var character = 'mario'; // TS is infering what type this is (inference)
 var age = 35;
 var isBlackBelt = false;
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ(7.5));

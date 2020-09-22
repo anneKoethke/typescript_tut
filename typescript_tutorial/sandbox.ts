@@ -7,3 +7,9 @@
 let character = 'mario'; // TS is infering what type this is (inference)
 let age = 35;
 let isBlackBelt = false;
+
+const circ = (diameter: number) => { // this type check is done, before compiled to JS file
+  return diameter*Math.PI;
+}
+
+console.log(circ(7.5));

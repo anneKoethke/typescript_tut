@@ -1,6 +1,6 @@
 "use strict";
 /* CLASSES */
-class Invoice {
+class Invoice1 {
     constructor(c, d, a) {
         this.client = c;
         this.details = d;
@@ -11,17 +11,17 @@ class Invoice {
         return `${this.client} owes £${this.amount} for ${this.details}.`;
     }
 }
-const invOne = new Invoice('Mario', 'Plumming', 250);
-const invTwo = new Invoice('Luigi', 'Website', 300);
-const invThree = new Invoice('Yoshi', 'Jumping', 100);
+const invOne = new Invoice1('Mario', 'Plumming', 250);
+const invTwo = new Invoice1('Luigi', 'Website', 300);
+const invThree = new Invoice1('Yoshi', 'Jumping', 100);
 // console.log(invOne.format());
 // console.log(invTwo.format());
-let invoices = [];
-invoices.push(invOne);
-invoices.push(invTwo);
-invoices.push(invThree);
-// console.log(invoices);
-invoices.forEach(inv => {
+let invoice1s = [];
+invoice1s.push(invOne);
+invoice1s.push(invTwo);
+invoice1s.push(invThree);
+// console.log(invoice1s);
+invoice1s.forEach(inv => {
     //console.log(inv.client, inv.details, inv.amount, ':', inv.format()); // can#t log details, because they are private now
     // inv.client = 'Frieda'; // won't work, because of readonly modifier
     console.log(inv.format());

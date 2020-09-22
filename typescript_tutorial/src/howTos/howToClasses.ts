@@ -1,5 +1,5 @@
 /* CLASSES */
-class Invoice { // Rechnung
+class Invoice1 { // Rechnung
   // this only works with a constructor!
   // all properties are public by default!
   // access modifiers: public, private, readonly
@@ -19,19 +19,19 @@ class Invoice { // Rechnung
   }
 }
 
-const invOne = new Invoice('Mario', 'Plumming', 250);
-const invTwo = new Invoice('Luigi', 'Website', 300);
-const invThree = new Invoice('Yoshi', 'Jumping', 100);
+const invOne = new Invoice1('Mario', 'Plumming', 250);
+const invTwo = new Invoice1('Luigi', 'Website', 300);
+const invThree = new Invoice1('Yoshi', 'Jumping', 100);
 // console.log(invOne.format());
 // console.log(invTwo.format());
 
-let invoices: Invoice[] = [];
-invoices.push(invOne);
-invoices.push(invTwo);
-invoices.push(invThree);
-// console.log(invoices);
+let invoice1s: Invoice1[] = [];
+invoice1s.push(invOne);
+invoice1s.push(invTwo);
+invoice1s.push(invThree);
+// console.log(invoice1s);
 
-invoices.forEach(inv => {
+invoice1s.forEach(inv => {
   //console.log(inv.client, inv.details, inv.amount, ':', inv.format()); // can#t log details, because they are private now
   // inv.client = 'Frieda'; // won't work, because of readonly modifier
   console.log(inv.format());

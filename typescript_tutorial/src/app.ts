@@ -1,6 +1,21 @@
-/* const anchor = document.querySelector('a');
-console.log(anchor.href); // error TS2531: Object is possibly 'null'. -> TS doesn't know the DOM beforehand, so could be null
- */
+// classes 
 
-const anchor = document.querySelector('a')!; // '!' tells TS, there is an anchor; error suppressed (you should be sure of this)
-console.log(anchor.href);
+const form = document.querySelector('.new-item-form') as HTMLFormElement; // now TS knows, but for Firefox they look the same ...
+// console.log(form.children);
+
+// inputs
+const type = document.querySelector('#type') as HTMLSelectElement;
+const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const amount = document.querySelector('#amount') as HTMLInputElement;
+
+form.addEventListener('submit', (e: Event) => {
+  e.preventDefault();
+  console.log(
+    type.value,
+    tofrom.value,
+    details.value,
+    amount.valueAsNumber
+  );
+  
+})

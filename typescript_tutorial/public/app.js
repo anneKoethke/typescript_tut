@@ -1,6 +1,13 @@
 "use strict";
-/* const anchor = document.querySelector('a');
-console.log(anchor.href); // error TS2531: Object is possibly 'null'. -> TS doesn't know the DOM beforehand, so could be null
- */
-var anchor = document.querySelector('a'); // '!' tells TS, there is an anchor; error suppressed (you should be sure of this)
-console.log(anchor.href);
+// classes 
+var form = document.querySelector('.new-item-form'); // now TS knows, but for Firefox they look the same ...
+// console.log(form.children);
+// inputs
+var type = document.querySelector('#type');
+var tofrom = document.querySelector('#tofrom');
+var details = document.querySelector('#details');
+var amount = document.querySelector('#amount');
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+});

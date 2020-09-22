@@ -1,1 +1,1 @@
-console.log('saying hello from \'IWillBeCompiled.ts\'!')
+console.log('saying hello from \'IWillBeCompiled.ts\' (or .js, actually)!')

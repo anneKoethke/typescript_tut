@@ -11,7 +11,7 @@ import { Invoice } from './classes/Invoice.js'; // IMPORTANT! MUST BE '.js', bec
 import { Payment } from './classes/Payment.js';
 import { ListTemplate } from './classes/ListTemplate.js';
 // listTemplate instance
-const ul = document.querySelector('.item-list');
+const ul = document.querySelector('ul');
 const list = new ListTemplate(ul);
 const form = document.querySelector('.new-item-form');
 // inputs 

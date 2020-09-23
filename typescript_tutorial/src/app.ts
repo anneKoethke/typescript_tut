@@ -15,7 +15,7 @@ import { ListTemplate } from './classes/ListTemplate.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
 // listTemplate instance
-const ul = document.querySelector('.item-list')!;
+const ul = document.querySelector('ul')!;
 const list = new ListTemplate(ul);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
@@ -37,5 +37,5 @@ form.addEventListener('submit', (e: Event) => {
   }
 
   list.render(doc, type.value, 'end');
+});
 
-})

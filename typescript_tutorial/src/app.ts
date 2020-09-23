@@ -13,13 +13,3 @@ import { Invoice } from './classes/Invoice.js'; // IMPORTANT! MUST BE '.js', bec
 import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
-let invoices: Invoice[] = [];
-const client_1 = new Invoice('Anna', 'website work', 250);
-const client_2 = new Invoice('Berta', 'database work', 450);
-
-invoices.push(client_1);
-invoices.push(client_2);
-
-invoices.forEach(inv => {
-  console.log(inv.format());
-})

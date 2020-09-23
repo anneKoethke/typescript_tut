@@ -25,3 +25,26 @@ const greetPerson = (person: isPerson) => {
 }
 
 greetPerson(me);
+
+/* CLASSES WITH INTERFACES */
+
+import { Invoice } from '../classes/Invoice.js'; // IMPORTANT! MUST BE '.js', because that's what the browser sees!
+import { Payment } from '../classes/Payment.js';
+import { HasFormatter } from '../interfaces/HasFormatter.js';
+
+// makes sure, those variables have a format() method
+let docOne: HasFormatter;
+let docTwo: HasFormatter
+
+docOne = new Invoice('Carla', 'web work', 250);
+docTwo = new Payment('Dora', 'buying coffee', 50);
+
+// makes sure that only such variables with a format() method can be added
+let docs: HasFormatter[] = [];
+docs.push(docOne);
+docs.push(docTwo);
+
+console.log(docs);
+// format() needs no arguments, because it'S dealed with internally
+console.log(docs[0].format());
+console.log(docs[1].format());

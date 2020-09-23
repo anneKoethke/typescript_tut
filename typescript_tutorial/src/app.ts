@@ -39,3 +39,4 @@ form.addEventListener('submit', (e: Event) => {
   list.render(doc, type.value, 'end');
 });
 
+const bla: string = "bla";
